@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "910062821321",
+    "project_id": "fincost-cb7b8",
+    "storage_bucket": "fincost-cb7b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910062821321:android:b138a45bfa901582d45218",
+        "android_client_info": {
+          "package_name": "com.example.fincost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910062821321-uku5n3gi5uqgl6sk6s6rvj6ovgmak2gf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fincost",
+            "certificate_hash": "e78b2de26c0db56282d87834ce6cc5c7701e3fd0"
+          }
+        },
+        {
+          "client_id": "910062821321-r3geeg7iaorcvsfd2dn8368bva9sijo6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjEKk1m0xJwm7LaPz20am_JirnUG1HUF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910062821321-r3geeg7iaorcvsfd2dn8368bva9sijo6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
