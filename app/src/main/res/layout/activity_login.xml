@@ -32,6 +32,7 @@
         android:layout_gravity="center_horizontal"
         android:padding="10dp"
         android:paddingTop="16dp"
+        app:startIconDrawable="@drawable/ic_baseline_email_24"
         app:boxBackgroundColor="@color/white"
         app:hintTextColor="@color/colorPrimary">
 
@@ -47,6 +48,7 @@
         android:layout_gravity="center_horizontal"
         android:padding="10dp"
         android:paddingTop="16dp"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
         app:boxBackgroundColor="@color/white"
         app:hintTextColor="@color/colorPrimary">
 
