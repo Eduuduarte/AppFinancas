@@ -63,7 +63,8 @@
             android:layout_weight="1"
             android:text="Criar conta"
             android:padding="3dp"
-            android:paddingRight="2dp">
+            android:paddingRight="2dp"
+            android:id="@+id/buttonEntrar">
 
         </Button>
         <Button

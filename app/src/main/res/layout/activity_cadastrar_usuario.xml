@@ -4,6 +4,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/appfundo"
     tools:context=".Activity.CadastrarUsuario">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/sologo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".2"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintWidth_percent=".8"
+        >
+
+    </ImageView>
+
+
+    <EditText
+        android:id="@+id/textNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nome"
+        app:layout_constraintVertical_bias=".52"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintWidth_percent=".8"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        app:boxBackgroundColor="@color/cardview_shadow_end_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </EditText>
+    <EditText
+        android:id="@+id/textEmailC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        app:layout_constraintVertical_bias=".61"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintWidth_percent=".8"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        app:boxBackgroundColor="@color/cardview_shadow_end_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </EditText>
+    <EditText
+        android:id="@+id/textSenhaC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Senha"
+        android:password="true"
+        app:layout_constraintVertical_bias=".71"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintWidth_percent=".8"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        app:boxBackgroundColor="@color/cardview_shadow_end_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </EditText>
+    <Button
+        android:id="@+id/buttonCadastrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_bias=".81"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintWidth_percent=".8"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        app:boxBackgroundColor="@color/cardview_shadow_end_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Cadastrar"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold">
+        >
+
+    </Button>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

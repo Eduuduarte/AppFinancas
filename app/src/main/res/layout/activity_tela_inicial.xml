@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Activity.TelaInicial"
     android:orientation="vertical"
-    android:background="@drawable/splashfundoo"
+    android:background="@drawable/splashfundo"
     android:id="@+id/linearLayout"
     android:gravity="center">
 
