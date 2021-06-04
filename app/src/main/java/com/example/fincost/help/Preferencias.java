@@ -27,7 +27,7 @@ public class Preferencias {
     public String getIdentificador(){
         return preferences.getString(CHAVE_INDENTIFICADOR, null);
     }
-    public String getNomeUSuario(){
+    public String getNome(){
         return  preferences.getString(CHAVE_NOME, null);
     }
 }

@@ -17,45 +17,41 @@
         android:scaleType="fitCenter"
         android:src="@drawable/logoapp" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:padding="10dp"
         android:paddingTop="16dp"
         app:startIconDrawable="@drawable/ic_baseline_email_24"
-        app:boxBackgroundColor="@color/white"
-        app:hintTextColor="@color/colorPrimary">
+        app:boxBackgroundColor="@color/cardview_shadow_end_color"
+        android:id="@+id/textEmail"
+        android:hint="Digite Seu Email">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Digite Seu Email" />
-    </com.google.android.material.textfield.TextInputLayout>
+    </EditText>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:padding="10dp"
         android:paddingTop="16dp"
         app:startIconDrawable="@drawable/ic_baseline_lock_24"
-        app:boxBackgroundColor="@color/white"
-        app:hintTextColor="@color/colorPrimary">
+        app:boxBackgroundColor="@color/cardview_shadow_end_color"
+        app:hintTextColor="@color/black"
+        android:id="@+id/textSenha"
+        android:hint="Digite Sua Senha"
+        android:password="true"
+        android:shadowColor="@color/cardview_light_background" >
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Digite Sua Senha"
-            android:password="true"
-            android:shadowColor="@color/cardview_light_background" />
-    </com.google.android.material.textfield.TextInputLayout>
+    </EditText>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="10dp"
+
         >
         <Button
             android:layout_width="match_parent"
@@ -64,7 +60,9 @@
             android:text="Criar conta"
             android:padding="3dp"
             android:paddingRight="2dp"
-            android:id="@+id/buttonEntrar">
+            android:id="@+id/buttonCriar"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
 
         </Button>
         <Button
@@ -74,6 +72,10 @@
             android:text="Entrar"
             android:padding="3dp"
             android:paddingRight="2dp"
+            android:paddingLeft="5dp"
+            android:id="@+id/buttonEntrar"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             ></Button>
     </LinearLayout>
 

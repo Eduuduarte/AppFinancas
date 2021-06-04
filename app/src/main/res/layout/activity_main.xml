@@ -1,18 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.MainActivity">
+    tools:context=".Activity.MainActivity"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <include
+        android:id="@+id/toolbarUm"
+        layout="@layout/toolbar">
+        </include>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:padding="20dp"
+        android:background="@color/colorPrimary"
+        >
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:layout_centerVertical="true"
+                android:id="@+id/textNomeUsuario"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+            </TextView>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="20dp"
+        android:layout_marginTop="-100dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardElevation="10dp"
+            android:layout_margin="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/tReceitaText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Receitas"
+                    android:textColor="@color/white"
+                    android:includeFontPadding="false"
+                    android:textSize="20sp"
+                    android:layout_above="@id/tTest"
+                    android:layout_centerInParent="true">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$123"
+                    android:textColor="@color/white"
+                    android:includeFontPadding="false"
+                    android:textSize="20sp"
+                    android:layout_centerInParent="true">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/tTest2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="39"
+                    android:textColor="@color/white"
+                    android:includeFontPadding="false"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/tTest"
+                    android:layout_centerHorizontal="true">
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardElevation="10dp"
+            android:layout_margin="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/tDespesasText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Despesas"
+                    android:textColor="@color/white"
+                    android:includeFontPadding="false"
+                    android:textSize="20sp"
+                    android:layout_above="@id/tTest3"
+                    android:layout_centerInParent="true">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tTest3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$123"
+                    android:textColor="@color/white"
+                    android:includeFontPadding="false"
+                    android:textSize="20sp"
+                    android:layout_centerInParent="true">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/tTest4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="39"
+                    android:textColor="@color/white"
+                    android:includeFontPadding="false"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/tTest3"
+                    android:layout_centerHorizontal="true">
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerResumo">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            app:fab_expandDirection="up"
+            app:fab_labelStyle="@style/LabelStyle">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/flReceitas"
+                app:fab_colorNormal="#FFF"
+                app:fab_size="mini"
+                app:fab_title="Adicionar Receitas"
+                app:fab_icon="@drawable/ic_money_24"/>
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/flDespesas"
+                app:fab_colorNormal="#FFF"
+                app:fab_size="mini"
+                app:fab_title="Adicionar Despesas"
+                app:fab_icon="@drawable/ic_menosmoney_24"/>
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/flInvestimento"
+                app:fab_colorNormal="#FFF"
+                app:fab_size="mini"
+                app:fab_title="Adicionar Investimento"
+                app:fab_icon="@drawable/ic_star_24"
+                />
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    </RelativeLayout>
+
+
+</LinearLayout>
