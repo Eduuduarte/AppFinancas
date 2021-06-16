@@ -1,9 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ReceitasActivity">
+    android:background="@drawable/appfundo"
+    tools:context=".Activity.ReceitasActivity"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <include
+        android:id="@+id/toolbarReceitas"
+        layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center">
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tipo de receita"
+            app:hintTextColor="@color/black"
+            android:id="@+id/textInputEscolha"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:theme="@style/MaterialComponents"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/textList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:inputType="none"
+                android:textColor="@color/black"
+                android:theme="@style/MaterialComponents"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Data"
+            android:ems="10"
+            android:maxLines="1"
+            android:outlineAmbientShadowColor="@color/black"
+            android:inputType="date"
+            android:layout_below="@+id/textInputEscolha"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"/>
+
+        <Button
+            style="@style/botaoPadrao"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_baseline_calendar_today_24"
+            android:layout_alignRight="@+id/editTextDate"
+            android:layout_below="@+id/textInputEscolha"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextValor"
+            android:textColorHint="@color/black"
+            android:layout_below="@+id/editTextDate"
+            android:textColor="@color/black"
+            android:hint="Valor da Receita - R$"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextdescricao"
+            android:layout_below="@+id/editTextValor"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/black"
+            android:hint="Descrição da receita"
+            android:textColor="@color/black"/>
+        
+
+    </RelativeLayout>
+
+
+</LinearLayout>

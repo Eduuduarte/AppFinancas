@@ -27,9 +27,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.util.Calendar;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView textNomeUsuario;
+    private TextView textDataAtual;
     private DatabaseReference firebase;
     private ValueEventListener valueEventListener;
     private FirebaseAuth autenticação;
@@ -45,11 +49,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        textDataAtual = findViewById(R.id.textDataAtual);
         textNomeUsuario = findViewById(R.id.textNomeUsuario);
         flReceitas = findViewById(R.id.flReceitas);
         flDespesas = findViewById(R.id.flDespesas);
         flInvestimentos = findViewById(R.id.flInvestimento);
 
+        atualizarDataAtual();
 
         Preferencias preferencias = new Preferencias(MainActivity.this);
         idUsuario = preferencias.getIdentificador();
@@ -134,6 +140,24 @@ public class MainActivity extends AppCompatActivity {
     private void abrirInvestimentos(){
         Intent intent = new Intent(MainActivity.this, InvestimentosActivity.class);
         startActivity(intent);
+    }
+
+    public void atualizarDataAtual(){
+        Calendar c = Calendar.getInstance();
+        c.get(Calendar.YEAR);
+        c.get(Calendar.MONTH);
+        c.get(Calendar.DATE);
+
+        String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(c.getTime());
+        String[] splitDate = currentDate.split("de");
+        String[] splitDay = splitDate[0].split(",");
+
+       String diaAtual = splitDay[1].trim();
+       String mesAtual = splitDate[1].trim();
+       String anoAtual = splitDate[2].trim();
+
+       textDataAtual.setText(diaAtual + "/" + mesAtual + "/" + anoAtual);
+
     }
 
 }

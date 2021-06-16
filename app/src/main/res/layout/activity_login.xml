@@ -62,7 +62,8 @@
             android:paddingRight="2dp"
             android:id="@+id/buttonCriar"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp">
+            android:layout_marginRight="5dp"
+            style="@style/botaoPadrao">
 
         </Button>
         <Button
@@ -76,6 +77,7 @@
             android:id="@+id/buttonEntrar"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            style="@style/botaoPadrao"
             ></Button>
     </LinearLayout>
 

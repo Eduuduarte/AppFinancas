@@ -9,5 +9,6 @@
     android:theme="?attr/actionBarTheme"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     app:titleTextColor="@color/white"
+    android:elevation="5dp"
 
     />
