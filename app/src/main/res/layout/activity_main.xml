@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#F5FFFA">
 
     <include
         android:id="@+id/toolbarUm"
@@ -15,33 +16,116 @@
     <RelativeLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:padding="20dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="30dp"
         android:background="@color/colorPrimary"
         >
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:layout_centerVertical="true"
+                android:id="@+id/textNomeUsuario"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+            </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textNomeUsuario"
+            android:text="Receita Total"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/textReceitaTotal"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/textReceitaTotal"
+            android:text="R$ 5.000,00"
+            android:textSize="14sp"
+            android:id="@+id/valorReceitaTotal"
+            >
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/valorReceitaTotal"
+            android:text="Despesa Total"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/textDespesaTotal"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/textDespesaTotal"
+            android:text="R$ 4.000,00"
+            android:textSize="14sp"
+            android:id="@+id/valorDespesaTotal"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/valorDespesaTotal"
+            android:text="Saldo Total"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/textSaldoTotal"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/textSaldoTotal"
+            android:text="R$ 5.000,00"
+            android:textSize="20sp"
+            android:id="@+id/valorSaldoTotal"
+            >
+        </TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textDataAtual"
+            android:layout_below="@+id/valorDespesaTotal"
             android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:textSize="12dp"
+            android:layout_alignRight="@+id/textSaldoTotal"
+            android:text="Investimentos"
             android:textColor="@color/white"
-            />
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/textInvestimentoTotalP"
+            ></TextView>
         <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text=""
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:layout_centerVertical="true"
-                android:id="@+id/textNomeUsuario"
-                android:layout_alignParentStart="true"
-                android:layout_centerInParent="true">
-
-            </TextView>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/textInvestimentoTotalP"
+            android:text="R$ 5.000,00"
+            android:textSize="20sp"
+            android:id="@+id/valorInvestimentoTotalP"
+            >
+        </TextView>
 
 
     </RelativeLayout>
@@ -50,28 +134,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"
-        android:layout_marginTop="-100dp">
+        android:layout_marginTop="-60dp"
+        >
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="0dp"
-            android:layout_height="125dp"
+            android:layout_height="110dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="@color/colorPrimary"
-            app:cardElevation="10dp"
+            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="6dp"
             android:layout_margin="10dp"
             style="@style/CardView"
+            android:id="@+id/cardViewInvestimento"
             >
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5dp">
+                android:padding="5dp"
+                >
                 <TextView
                     android:id="@+id/tReceitaText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Receitas"
-                    android:textColor="@color/white"
+                    android:text="Investimentos"
+                    android:textColor="@color/black"
                     android:includeFontPadding="false"
                     android:textSize="20sp"
                     android:layout_above="@id/tTest"
@@ -83,25 +171,22 @@
                     android:id="@+id/tTest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="$123"
-                    android:textColor="@color/white"
+                    android:text="Detalhamento"
+                    android:textColor="@color/black"
                     android:includeFontPadding="false"
-                    android:textSize="20sp"
+                    android:textSize="12sp"
                     android:layout_centerInParent="true">
 
                 </TextView>
-                <TextView
-                    android:id="@+id/tTest2"
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="39"
-                    android:textColor="@color/white"
-                    android:includeFontPadding="false"
-                    android:textSize="14sp"
-                    android:layout_below="@+id/tTest"
-                    android:layout_centerHorizontal="true">
+                    android:background="@drawable/ic_baseline_work_outline_24"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@id/tTest">
 
-                </TextView>
+                </ImageView>
+
 
             </RelativeLayout>
 
@@ -109,10 +194,11 @@
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="0dp"
-            android:layout_height="125dp"
+            android:layout_height="110dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="@color/colorPrimary"
-            app:cardElevation="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="6dp"
             android:layout_margin="10dp"
             style="@style/CardView"
             >
@@ -125,8 +211,8 @@
                     android:id="@+id/tDespesasText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Despesas"
-                    android:textColor="@color/white"
+                    android:text="Planejamento"
+                    android:textColor="@color/black"
                     android:includeFontPadding="false"
                     android:textSize="20sp"
                     android:layout_above="@id/tTest3"
@@ -138,25 +224,20 @@
                     android:id="@+id/tTest3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="$123"
-                    android:textColor="@color/white"
+                    android:text="Projetos"
+                    android:textColor="@color/black"
                     android:includeFontPadding="false"
-                    android:textSize="20sp"
+                    android:textSize="12sp"
                     android:layout_centerInParent="true">
 
                 </TextView>
-                <TextView
-                    android:id="@+id/tTest4"
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="39"
-                    android:textColor="@color/white"
-                    android:includeFontPadding="false"
-                    android:textSize="14sp"
+                    android:background="@drawable/ic_baseline_wb_sunny_24"
+                    android:layout_centerInParent="true"
                     android:layout_below="@+id/tTest3"
-                    android:layout_centerHorizontal="true">
-
-                </TextView>
+                    ></ImageView>
 
             </RelativeLayout>
 
@@ -164,13 +245,39 @@
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="match_parent"
+        android:layout_marginTop="-20dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Histórico"
+            android:textColor="#4F4F4F"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/textHisto"
+            android:layout_alignParentTop="true"
+            >
+
+        </TextView>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/recyclerResumo">
+            android:id="@+id/refreshlayout">
 
-        </androidx.recyclerview.widget.RecyclerView>
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lvMovimentacao"
+                android:layout_below="@id/textHisto">
+
+            </ListView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
 
         <com.getbase.floatingactionbutton.FloatingActionsMenu
             android:layout_width="wrap_content"
@@ -178,7 +285,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="0dp"
+            android:layout_marginBottom="2dp"
             app:fab_expandDirection="up"
             app:fab_labelStyle="@style/LabelStyle">
 

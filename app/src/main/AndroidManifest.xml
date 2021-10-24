@@ -9,18 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinCost">
-        <activity android:name=".Activity.InvestimentosActivity"></activity>
-        <activity android:name=".Activity.DespesasActivity" />
-        <activity android:name=".Activity.ReceitasActivity"
+        <activity
+            android:name=".Activity.MeusInvestimentos"
+            android:exported="true" />
+        <activity android:name=".Activity.InvestimentosActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.MainActivity"></meta-data>
+        </activity>
+        <activity
+            android:name=".Activity.DespesasActivity"
             android:parentActivityName=".Activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Activity.MainActivity">
-                
-            </meta-data>
+                android:value=".Activity.MainActivity"></meta-data>
         </activity>
-
-
+        <activity
+            android:name=".Activity.ReceitasActivity"
+            android:parentActivityName=".Activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.MainActivity"></meta-data>
+        </activity>
         <activity android:name=".Activity.CadastrarUsuario" />
         <activity
             android:name=".Activity.TelaInicial"

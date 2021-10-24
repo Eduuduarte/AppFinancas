@@ -1,9 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/appfundo"
+tools:context=".Activity.DespesasActivity"
+android:orientation="vertical">
+
+<include
+    android:id="@+id/toolbarDespesas"
+    layout="@layout/toolbar"/>
+
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.DespesasActivity">
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:gravity="top">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tipo de despesa"
+        android:textColorHint="@color/white"
+        android:id="@+id/textInputEscolhaD"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:theme="@style/MaterialComponents"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/textListD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:inputType="none"
+            android:textColor="@color/white"
+            android:theme="@style/MaterialComponents"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/editTextDateD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Data"
+        android:enabled="false"
+        android:ems="10"
+        android:maxLines="1"
+        android:outlineAmbientShadowColor="@color/black"
+        android:inputType="date"
+        android:layout_below="@+id/textInputEscolhaD"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"/>
+
+    <Button
+        style="@style/botaoPadrao"
+        android:id="@+id/calendarioButtonD"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_baseline_calendar_today_24"
+        android:layout_alignRight="@+id/editTextDateD"
+        android:textColor="@color/white"
+        android:layout_below="@+id/textInputEscolhaD"
+        android:layout_marginTop="20dp"/>
+
+    <com.blackcat.currencyedittext.CurrencyEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextValorD"
+        android:textColor="@color/white"
+        android:layout_below="@+id/editTextDateD"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextdescricaoD"
+        android:layout_below="@+id/editTextValorD"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/white"
+        android:hint="Descrição da despesa"
+        android:textColor="@color/white"/>
+
+
+
+</RelativeLayout>
+
+
+</LinearLayout>

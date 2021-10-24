@@ -7,4 +7,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#2F4F4F</color>
     <color name="colorPrimaryDark">#7FFFD4</color>
+    <color name="colorAccent">#00FA9A</color>
+    <color name="colorNegativo">#B22222</color>
+    <color name="colorPositivo">#00FF7F</color>
+    <color name="colorInvestimento">#00FFFF</color>
+
 </resources>

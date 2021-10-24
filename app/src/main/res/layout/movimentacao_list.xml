@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="1dp"
+        android:elevation="5dp"
+        app:cardBackgroundColor="#F5FFFA">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tipoMovimento"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Tipo"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#4F4F4F"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="12dp"
+        android:id="@+id/dataMovimento"
+        android:layout_alignRight="@+id/tipoMovimento"
+        android:layout_alignParentTop="true"
+        android:text="01/08/2021"
+        android:textSize="12sp"
+        android:textColor="#4F4F4F">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/descricaoMovimento"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/tipoMovimento"
+        android:text="Descrição"
+        android:textSize="18sp"
+        android:textColor="#4F4F4F"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/tipoMovimento"
+        android:id="@+id/valorMovimento"
+        android:layout_alignRight="@+id/tipoMovimento"
+        android:text="R$ 1.00"
+        android:textSize="18sp"
+        android:textColor="#4F4F4F"
+        android:textStyle="bold">
+    </TextView>
+
+    </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

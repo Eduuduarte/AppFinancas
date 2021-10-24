@@ -4,12 +4,9 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
-        <item name="colorOnPrimary">@color/white</item>
         <item name="android:windowBackground">@android:color/white</item>
-        <item name="android:itemBackground">@android:color/white</item>
-        <item name="android:textColor">@android:color/black</item>
     </style>
-    <style name="botaoPadrao" parent="Theme.AppCompat.Light">
+    <style name="botaoPadrao" parent="Theme.MaterialComponents.Light">
         <item name="colorButtonNormal">@color/colorPrimaryDark</item>
         <item name="colorControlHighlight">@color/colorPrimary</item>
         <item name="android:textColor">@android:color/white</item>
@@ -20,10 +17,17 @@
         <item name="android:background">@drawable/bg_label</item>
         <item name="android:textColor">#FFF</item>
     </style>
-    <style name="MaterialComponents" parent="Theme.MaterialComponents.Light.Dialog">
+    <style name="MaterialComponents" parent="Theme.MaterialComponents.Light">
         <item name="android:background">@color/cardview_shadow_end_color</item>
-        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">22dp</item>
         <item name="android:windowBackground">@color/cardview_shadow_end_color</item>
+    </style>
+    <style name="Slading" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:itemBackground">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 </resources>

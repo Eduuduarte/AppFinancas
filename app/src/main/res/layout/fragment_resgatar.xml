@@ -1,14 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.ResgatarFragment">
+    tools:context=".Fragment.ResgatarFragment"
+    android:background="@drawable/appfundo"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="top">
 
-</FrameLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tipo de investimento"
+            android:textColorHint="@color/white"
+            android:id="@+id/investirTipoR"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:theme="@style/MaterialComponents"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/textListInvestirR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:inputType="none"
+                android:textColor="@color/white"
+                android:theme="@style/MaterialComponents"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Modalidade de investimento"
+            android:textColorHint="@color/white"
+            android:id="@+id/investirTextR"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:theme="@style/MaterialComponents"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_below="@+id/investirTipoR">
+
+            <AutoCompleteTextView
+                android:id="@+id/textListModalidadeR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:inputType="none"
+                android:textColor="@color/white"
+                android:theme="@style/MaterialComponents"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/editTextDateInvestirR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Data"
+            android:enabled="false"
+            android:ems="10"
+            android:maxLines="1"
+            android:outlineAmbientShadowColor="@color/black"
+            android:inputType="date"
+            android:layout_below="@+id/investirTextR"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"/>
+
+        <Button
+            style="@style/botaoPadrao"
+            android:id="@+id/calendarioInvestirR"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_baseline_edit_24"
+            android:layout_alignRight="@+id/editTextDateInvestirR"
+            android:textColor="@color/white"
+            android:layout_below="@+id/investirTextR"
+            android:layout_marginTop="20dp"/>
+
+        <com.blackcat.currencyedittext.CurrencyEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextInvestR"
+            android:textColor="@color/white"
+            android:layout_below="@+id/editTextDateInvestirR"
+            android:hint="Valor da Receita - R$"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextdescricaoInvestR"
+            android:layout_below="@+id/editTextInvestR"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/white"
+            android:hint="Descrição da receita"
+            android:textColor="@color/white"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonInvestirR"
+            android:layout_below="@+id/editTextdescricaoInvestR"
+            android:layout_marginTop="20dp"
+            android:text="Enviar"
+            />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

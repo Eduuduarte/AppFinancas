@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.fincost.Config.ConfiguracaoFirebase;
+import com.example.fincost.Model.Receita;
 import com.example.fincost.R;
 import com.example.fincost.help.Base64Custom;
 import com.example.fincost.help.Preferencias;
@@ -23,6 +24,10 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+
+import java.text.DateFormat;
+import java.util.Calendar;
 
 public class CadastrarUsuario extends AppCompatActivity {
 
@@ -31,8 +36,13 @@ public class CadastrarUsuario extends AppCompatActivity {
     private EditText textSenha;
     private EditText textEmail;
     private Usuarios usuarios;
+    private Receita receita;
 
+    private DatabaseReference firebase;
     private FirebaseAuth autenticacao;
+
+    private String mes;
+    private String ano;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +54,7 @@ public class CadastrarUsuario extends AppCompatActivity {
         textEmail = findViewById(R.id.textEmailC);
         textSenha = findViewById(R.id.textSenhaC);
 
+        atualizarDataAtual();
         buttonCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +62,11 @@ public class CadastrarUsuario extends AppCompatActivity {
                 usuarios.setNome(textNome.getText().toString());
                 usuarios.setEmail(textEmail.getText().toString());
                 usuarios.setSenha(textSenha.getText().toString());
+
+                receita = new Receita();
+                receita.setAno(ano);
+                receita.setMes(mes);
+
                 cadastrarUsuario();
             }
         });
@@ -73,8 +89,14 @@ public class CadastrarUsuario extends AppCompatActivity {
                     usuarios.setId(identificadorUsuario);
                     usuarios.salvar();
 
+                    receita.setId(identificadorUsuario);
+                    receita.salvarReceitaMensal();
+
+
                     Preferencias preferencias = new Preferencias(CadastrarUsuario.this);
                     preferencias.salvarDados(identificadorUsuario, usuarios.getNome());
+
+
 
                     AbrirLogin();
 
@@ -108,4 +130,27 @@ public class CadastrarUsuario extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    private void atualizarDataAtual(){
+        Calendar c = Calendar.getInstance();
+        c.get(Calendar.YEAR);
+        c.get(Calendar.MONTH);
+        c.get(Calendar.DATE);
+
+        String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(c.getTime());
+        String[] splitDate = currentDate.split("de");
+        String[] splitDay = splitDate[0].split(",");
+
+        String diaAtual = splitDay[1].trim();
+        String mesAtual = splitDate[1].trim();
+        String anoAtual = splitDate[2].trim();
+        int mesAtualM = c.get(Calendar.MONTH)+1;
+        int diaAtualD = c.get(Calendar.DATE);
+        int anoAtualY = c.get(Calendar.YEAR);
+
+        mes = mesAtual;
+        ano = anoAtual;
+
+    }
+
+
 }

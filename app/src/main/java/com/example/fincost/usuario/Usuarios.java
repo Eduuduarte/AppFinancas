@@ -10,6 +10,9 @@ public class Usuarios {
     private String email;
     private String senha;
     private String id;
+    private Double receitaTotal = 0.0;
+    private Double despesaTotal = 0.0;
+    private Double investimentoTotal = 0.0;
 
     public Usuarios() {
 
@@ -18,6 +21,22 @@ public class Usuarios {
     public void salvar(){
         DatabaseReference referenceFirebase = ConfiguracaoFirebase.getFirebase();
         referenceFirebase.child("usuarios").child(getId()).setValue(this);
+    }
+
+    public Double getReceitaTotal() {
+        return receitaTotal;
+    }
+
+    public void setReceitaTotal(Double receitaTotal) {
+        this.receitaTotal = receitaTotal;
+    }
+
+    public Double getDespesaTotal() {
+        return despesaTotal;
+    }
+
+    public void setDespesaTotal(Double despesaTotal) {
+        this.despesaTotal = despesaTotal;
     }
 
     public String getNome() {

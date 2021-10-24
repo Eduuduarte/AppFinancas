@@ -1,98 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/appfundo"
     tools:context=".Activity.CadastrarUsuario">
 
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/sologo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".2"
-        app:layout_constraintHorizontal_bias=".5"
-        app:layout_constraintWidth_percent=".8"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
         >
 
     </ImageView>
 
 
-    <EditText
-        android:id="@+id/textNome"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nome"
-        app:layout_constraintVertical_bias=".52"
-        app:layout_constraintHorizontal_bias=".5"
-        app:layout_constraintWidth_percent=".8"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="20dp"
-        app:boxBackgroundColor="@color/cardview_shadow_end_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/appfundo"
+        android:orientation="vertical"
+        android:elevation="20dp"
+        >
 
-    </EditText>
-    <EditText
-        android:id="@+id/textEmailC"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        app:layout_constraintVertical_bias=".61"
-        app:layout_constraintHorizontal_bias=".5"
-        app:layout_constraintWidth_percent=".8"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="20dp"
-        app:boxBackgroundColor="@color/cardview_shadow_end_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        <EditText
+            android:id="@+id/textNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/custom_input"
+            android:hint="Nome"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@color/cardview_shadow_end_color"
+            tools:ignore="TouchTargetSizeCheck">
 
-    </EditText>
-    <EditText
-        android:id="@+id/textSenhaC"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Senha"
-        android:password="true"
-        app:layout_constraintVertical_bias=".71"
-        app:layout_constraintHorizontal_bias=".5"
-        app:layout_constraintWidth_percent=".8"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="20dp"
-        app:boxBackgroundColor="@color/cardview_shadow_end_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        </EditText>
 
-    </EditText>
+        <EditText
+            android:id="@+id/textEmailC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/custom_input"
+            android:hint="Email"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@color/cardview_shadow_end_color"
+            tools:ignore="TouchTargetSizeCheck">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/textSenhaC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/custom_input"
+            android:hint="Senha"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:password="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@color/cardview_shadow_end_color"
+            app:layout_constraintHorizontal_bias=".5"
+            app:layout_constraintVertical_bias=".71"
+            app:layout_constraintWidth_percent=".8"
+            tools:ignore="TouchTargetSizeCheck">
+
+        </EditText>
     <Button
         android:id="@+id/buttonCadastrar"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintVertical_bias=".81"
-        app:layout_constraintHorizontal_bias=".5"
-        app:layout_constraintWidth_percent=".8"
+        android:layout_marginTop="20dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="20dp"
         app:boxBackgroundColor="@color/cardview_shadow_end_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:text="Cadastrar"
         android:textSize="18sp"
         android:textColor="@color/white"
@@ -100,6 +109,7 @@
         >
 
     </Button>
+    </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

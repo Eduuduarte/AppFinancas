@@ -17,16 +17,38 @@
         android:scaleType="fitCenter"
         android:src="@drawable/logoapp" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/appfundo"
+        android:orientation="vertical"
+        android:elevation="20dp">
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:paddingTop="15dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
         android:padding="10dp"
-        android:paddingTop="16dp"
-        app:startIconDrawable="@drawable/ic_baseline_email_24"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/custom_input"
+        android:textColorHint="@color/black"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawablePadding="5dp"
         app:boxBackgroundColor="@color/cardview_shadow_end_color"
         android:id="@+id/textEmail"
-        android:hint="Digite Seu Email">
+        android:inputType="textEmailAddress"
+        android:hint="Digite Seu Email"
+        android:textColor="@color/black"
+        >
 
     </EditText>
 
@@ -35,23 +57,32 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:padding="10dp"
-        android:paddingTop="16dp"
-        app:startIconDrawable="@drawable/ic_baseline_lock_24"
-        app:boxBackgroundColor="@color/cardview_shadow_end_color"
+        android:paddingTop="15dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/custom_input"
+        android:drawablePadding="5dp"
+        android:textColorHint="@color/black"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
         app:hintTextColor="@color/black"
         android:id="@+id/textSenha"
         android:hint="Digite Sua Senha"
-        android:password="true"
-        android:shadowColor="@color/cardview_light_background" >
+        android:textColor="@color/black"
+        android:inputType="textPassword
+">
 
     </EditText>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp"
-
+        android:paddingTop="20dp"
+        android:layout_marginTop="10dp"
         >
         <Button
             android:layout_width="match_parent"
@@ -63,7 +94,7 @@
             android:id="@+id/buttonCriar"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            style="@style/botaoPadrao">
+            android:background="@color/colorPrimary">
 
         </Button>
         <Button
@@ -77,8 +108,9 @@
             android:id="@+id/buttonEntrar"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            style="@style/botaoPadrao"
+            android:background="@color/colorPrimary"
             ></Button>
+    </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

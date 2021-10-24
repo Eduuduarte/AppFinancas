@@ -17,15 +17,13 @@
         android:layout_height="match_parent"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:gravity="center">
-
-
+        android:gravity="top">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Tipo de receita"
-            app:hintTextColor="@color/black"
+            android:textColorHint="@color/white"
             android:id="@+id/textInputEscolha"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
             android:theme="@style/MaterialComponents"
@@ -41,43 +39,42 @@
                 android:layout_weight="1"
                 android:enabled="false"
                 android:inputType="none"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:theme="@style/MaterialComponents"/>
         </com.google.android.material.textfield.TextInputLayout>
-
 
         <EditText
             android:id="@+id/editTextDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Data"
+            android:enabled="false"
             android:ems="10"
             android:maxLines="1"
             android:outlineAmbientShadowColor="@color/black"
             android:inputType="date"
             android:layout_below="@+id/textInputEscolha"
             android:layout_marginTop="20dp"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
 
         <Button
             style="@style/botaoPadrao"
+            android:id="@+id/calendarioButton"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@drawable/ic_baseline_calendar_today_24"
             android:layout_alignRight="@+id/editTextDate"
+            android:textColor="@color/white"
             android:layout_below="@+id/textInputEscolha"
             android:layout_marginTop="20dp"/>
 
-        <EditText
-            android:layout_width="wrap_content"
+        <com.blackcat.currencyedittext.CurrencyEditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editTextValor"
-            android:textColorHint="@color/black"
+            android:textColor="@color/white"
             android:layout_below="@+id/editTextDate"
-            android:textColor="@color/black"
             android:hint="Valor da Receita - R$"
-            android:inputType="numberDecimal"
             android:layout_marginTop="20dp"/>
         <EditText
             android:layout_width="match_parent"
@@ -85,10 +82,9 @@
             android:id="@+id/editTextdescricao"
             android:layout_below="@+id/editTextValor"
             android:layout_marginTop="20dp"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/white"
             android:hint="Descrição da receita"
-            android:textColor="@color/black"/>
-        
+            android:textColor="@color/white"/>
 
     </RelativeLayout>
 
